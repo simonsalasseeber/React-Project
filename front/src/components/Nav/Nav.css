@@ -1,0 +1,36 @@
+/* Estilo para los enlaces de navegación cuando están activos */
+.active {
+  font-weight: bold; /* Texto en negrita cuando está activo */
+}
+  
+  /* Estilo para los enlaces de navegación en general */
+  .nav-link {
+    text-align: center;
+    text-decoration: none; /* Quita la subrayado por defecto */
+    color: whitesmoke; /* Color de texto negro */
+    margin-right: 30px; /* Espacio entre enlaces */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+    border: 1px solid white;
+    border-radius: 170px;
+    display: flex; /* Usamos flexbox para centrar verticalmente el contenido */
+    align-items: center;
+    padding: 5px;
+  }
+  
+  /* Estilo adicional para resaltar el enlace al pasar el mouse */
+  .nav-link:hover {
+    background-color: lightgray;
+    background-blend-mode: luminosity;
+    color: black;
+  }
+
+  .nav-container {
+    background-color: black; /* Cambia "your-color" al color deseado */
+    padding: 15px; /* Añade relleno para ajustar el espacio alrededor de los elementos de navegación */
+    display: flex; /* Usa flexbox para alinear horizontalmente los elementos de navegación */
+    justify-content: space-around; /* Distribuye uniformemente los elementos de navegación */
+    align-items: center; /* Centra verticalmente los elementos de navegación */
+  }
+  

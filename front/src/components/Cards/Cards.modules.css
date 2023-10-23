@@ -1,0 +1,18 @@
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.cards {
+    width: calc(20% - 20px); /* Ancho del 20% con un margen de 20px entre elementos */
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 200px; /* Define la altura deseada */
+    font-size: 1px; /* Define el tamaño de fuente deseado */
+    margin-bottom: 1px;
+}
+
