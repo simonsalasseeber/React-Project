@@ -1,0 +1,26 @@
+.card-container {
+    font-size: 12px; /* Define el tamaño de fuente deseado */
+    padding: 5px; /* Define el relleno deseado */
+    margin: 5px; /* Define el margen deseado */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    width: auto;
+    position: relative;
+    border-radius: 10px; /* Puedes ajustar el valor según tus preferencias */
+    border: 1px solid #000; /* Agregué un borde para resaltar el redondeo */
+  }
+  
+  
+.card-container img {
+      max-width: 100%; /* Ajusta el tamaño de la imagen para que quepa en el contenedor */
+      height: auto; /* Mantiene la proporción de la imagen */
+      border-radius: 10%;
+    }
+  
+   
+.active {
+      font: bold;
+    }

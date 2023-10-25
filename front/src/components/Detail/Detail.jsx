@@ -19,7 +19,7 @@ const Detail = () => {
   return ( // aca dentro va siempre el html a renderizar
             // el character? se fija si ya se cumplió la promesa del useEffect y, en efecto, hay un character en mi estado local
             // si lo hay, voy a mostrar todo esto que está acá abajo. tambien se puede hacer con un loading.
-    <div> 
+    <div className="card-container">  
             <h2>{character?.name}</h2> 
             <h2>{character?.species}</h2>
             <h2>{character?.gender}</h2>

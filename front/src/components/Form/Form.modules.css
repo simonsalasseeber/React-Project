@@ -41,4 +41,7 @@
 .submit {
  margin-top: 10px;
  align-items: center;
+ border-radius: 10px;
+ justify-content: center;
+ align-items: center;
 }

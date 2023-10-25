@@ -16,8 +16,7 @@ const Card = (props) => {
       setIsFav(!isFav); // setea el reverso
    } // si NO usara el dispatch, no modifico el estado global!!!
 
-  
-
+   
    useEffect(() => {
       myFavorites.forEach((fav) => {
          if (fav.id === props.id) {

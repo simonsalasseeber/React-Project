@@ -15,3 +15,21 @@ export const removeFav = (id) => {
         payload: id,
     }
 }
+
+export const ORDER = 'ORDER';
+
+export const orderCards = (order) => {
+    return {
+        type: ORDER,
+        payload: order,
+    }
+}
+
+export const FILTER = 'FILTER';
+
+export const filterCards = (gender) => {
+    return {
+        type: FILTER,
+        payload: gender,
+    }
+}
