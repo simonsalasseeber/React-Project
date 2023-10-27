@@ -1,8 +1,9 @@
-import { ADD_FAV, REMOVE_FAV, FILTER, ORDER } from "./actions"
+import { ADD_FAV, REMOVE_FAV, CLEAN_FAVS, FILTER, ORDER, ACCESS } from "./actions"
 
 const initialState = {
     myFavorites: [],
     allCharacters: [],
+    access: false,
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -27,7 +28,16 @@ switch(action.type) {
         }
          // si es A, hace a menos b (primer elemento menos segundo, si da positivo los intercambia)
          // si es B, a la inversa. acostumbrarse a usar estos operadores ternarios. tambien se puede con un if.
-    
+    case ACCESS:
+        return {
+            ...state,
+            access: action.payload,
+        }
+    case CLEAN_FAVS:
+        return {
+            ...state,
+            myFavorites: action.payload,
+        }
         default:
         return { ...state};
 }

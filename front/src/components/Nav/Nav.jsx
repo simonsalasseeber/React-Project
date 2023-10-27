@@ -2,8 +2,15 @@ import SearchBar from '../SearchBar/SearchBar';
 import { NavLink } from 'react-router-dom'; // NavLink agrega funcionalidades a Link, permitiendo diferenciar entre componentes seleccionados en pantalla
 import './Nav.css';
 import PATHROUTES from '../../helpers/PathRoutes.helper';
+import { useDispatch } from 'react-redux';
+import { cleanFavs } from '../../redux/actions';
 
-const Nav = (props) => { // sigue el tobogán
+const Nav = (props) => {
+  const dispatch = useDispatch();
+  const handleLogout = () => {
+    dispatch(cleanFavs([]));
+  }
+  // sigue el tobogán
     return ( // renderizo SearchBar (ahora va a estar dentro de este componente Nav -highOrderComponent)
     <div className='nav-container'> 
     <NavLink
@@ -29,6 +36,7 @@ const Nav = (props) => { // sigue el tobogán
         to={PATHROUTES.LOGIN}
         activeclassname='active'
         className="nav-link"
+        onClick={handleLogout}
         >Log out</NavLink>
     </div>
 );

@@ -1,20 +1,20 @@
 import Cards from './components/Cards/Cards';
 import Nav from './components/Nav/Nav';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
-import {Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import {Routes, Route, useLocation } from 'react-router-dom';
 import About from './components/About/About';
 import Detail from './components/Detail/Detail';
 import PATHROUTES from './helpers/PathRoutes.helper';
-import Form from './components/Form/Form';
 import Favorites from './components/Favorites/Favorites';
-
-
+import Form from './components/Form/Form';
+import useLogin from './components/Login/Login';
 
 function App() {
 
    const[characters, setCharacter] = useState([]); // es un hook. defino como se maneja la variable que se está buscando, inicializándola vacía
    const APIKEY = "pi-hx-simonsalasseeber";
+   const login = useLogin();
 
    const onSearch = (id) => {
       axios(`https://rickandmortyapi.com/api/character/${id}?key=${APIKEY}`).then(({ data }) => {
@@ -35,35 +35,14 @@ function App() {
 
    const location = useLocation();
    const isNotRoot = location.pathname !== '/';
-
-   const [access, setAccess] = useState(false);
-   const EMAIL = 'simonsalasseeber@gmail.com';
-   const PASSWORD = 'Simon1998';
-   const navigate = useNavigate();
-
-   const login = (userData) => {
-      if (userData.password === PASSWORD && userData.email === EMAIL) {
-         setAccess(true);
-         navigate('/home');
-      }
-      else {
-         alert('Credenciales inválidas')
-      }
-   }
-
-   useEffect(() => {
-      !access && navigate('/');
-    }, [access]);
-
-  
-
+    
    
    return (
       <div className='App'>
          {isNotRoot && <Nav onSearch={onSearch}/>}
          <Routes>
-            <Route path={PATHROUTES.LOGIN} element={<Form login={login}/>} /> 
-
+            <Route path={PATHROUTES.LOGIN} element={<Form login={login} />} />
+      
             <Route path={PATHROUTES.HOME} element={<Cards characters={characters} //mi home muestra las cards
             onClose={onClose} />} /> 
 

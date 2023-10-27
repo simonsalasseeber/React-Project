@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-evenly;
+    background-image: url('my-vite-app\PI-simonsalasseeber\front\src\assets\Simon_montaña.png');
 }
 
 .cards {

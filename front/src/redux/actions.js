@@ -33,3 +33,21 @@ export const filterCards = (gender) => {
         payload: gender,
     }
 }
+
+export const ACCESS = 'ACCESS'; 
+
+export const setAccess = (access) => {
+    return {
+        type: ACCESS,
+        payload: access,
+    }
+}
+
+export const CLEAN_FAVS = 'CLEAN_FAVS';
+
+export const cleanFavs = () => {
+    return {
+        type: CLEAN_FAVS,
+        payload: [],
+    }
+}

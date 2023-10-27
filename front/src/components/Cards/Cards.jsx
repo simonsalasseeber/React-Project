@@ -16,5 +16,5 @@ export default function Cards(props) {
          image={char.image}
          onClose={onClose} /> // key es donde andamos y se usa siempre, ...character me permite traer tooodas las propiedades del objeto
       })};
-   </div>;
+   </div>
 }
